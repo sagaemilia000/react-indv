@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/landingPage/LandingPage";
-import HomePage from "./pages/homePage/HomePage";
+import EventsPage from "./pages/eventsPage/EventsPage";
 import EventDetailsPage from "./pages/eventDetailsPage/EventDetailsPage";
 import CartPage from "./pages/cartPage/CartPage";
 import TicketPage from "./pages/ticketPage/TicketPage";
@@ -14,8 +14,8 @@ function App() {
           path="/"
           element= {<LandingPage/>} />
         <Route 
-          path="/home"
-          element= {<HomePage/>} />
+          path="/events"
+          element= {<EventsPage/>} />
       <Route 
           path="/details"
           element= {<EventDetailsPage/>} />

@@ -1,12 +1,13 @@
 import Navbar from "../../components/navBar/NavBar"
+import "./eventsPage.css"
 
-function ErrorPage() {
+function EventsPage() {
     return (
         <>
-            <h1>errorPage</h1>
+            <h1>eventsPage</h1>
             <Navbar />
         </>
     )
 }
 
-export default ErrorPage
+export default EventsPage
