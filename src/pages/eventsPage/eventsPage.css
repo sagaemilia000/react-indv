@@ -1,0 +1,8 @@
+
+.events-title {
+    color: var(--color-pink);
+    font-size: 32px;
+    font-family: 'SansitaOne', sans-serif;
+    text-align: center;
+    padding: 2rem;
+}
