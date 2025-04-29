@@ -4,6 +4,7 @@ import { useState } from "react";
 import EventInfo from "../../components/eventInfo/EventInfo";
 import TicketCounter from "../../components/ticketCounter/TicketCounter";
 import "./eventDetailsPage.css"
+import { useCartStore } from "../../store/cartStore";
 
 function EventDetailsPage() {
 
@@ -12,12 +13,10 @@ function EventDetailsPage() {
 
     const [quantity, setQuantity] = useState(1);
 
+    const { addToCart } = useCartStore();
+
     const handleAddToCart = () => {
-            console.log("Lägger till i kundvagn:", {
-            eventId: event.id,
-            quantity,
-            totalPrice: quantity * event.price,
-            });
+        addToCart(event, quantity);
         }
 
     if (!event) {
