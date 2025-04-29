@@ -17,7 +17,7 @@ function App() {
           path="/events"
           element= {<EventsPage/>} />
       <Route 
-          path="/details"
+          path="/details/:id"
           element= {<EventDetailsPage/>} />
         <Route 
           path="/cart"
