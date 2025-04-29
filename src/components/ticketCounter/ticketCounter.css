@@ -1,0 +1,52 @@
+.ticket-counter {
+    margin-top: 5rem;
+    border: 1px solid var(--color-pink);
+    border-radius: 3px;
+  }
+  
+  .ticket-counter__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ticket-counter__controls button {
+    font-size: 28px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid var(--color-pink);
+    width: 5rem;
+    height: 4rem;
+  }
+  
+  .ticket-counter__total {
+    font-family: var(--text-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-white);
+    text-shadow: 1px 1px var(--color-pink);
+    padding: 1rem 0rem;
+  }
+
+  .ticket-counter__value {
+    font-family: var(--text-font);
+    color: var(--color-white);
+    font-size: 28px;
+    border: 1px solid var(--color-pink);
+    width: 5rem;
+    padding: 0.5rem 1rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ticket-counter__counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }

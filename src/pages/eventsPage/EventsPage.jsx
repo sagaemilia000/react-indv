@@ -1,13 +1,13 @@
 import Navbar from "../../components/navBar/NavBar"
 import "./eventsPage.css"
 import { useEffect } from 'react';
-import useTicketStore from '../../store/ticketStore';
+import useEventStore from '../../store/eventStore';
 import EventList from '../../components/eventList/EventList';
 import CartBtn from "../../components/cartBtn/CartBtn";
 
 function EventsPage() {
 
-    const { events, isLoading, error, fetchEvents } = useTicketStore();
+    const { events, isLoading, error, fetchEvents } = useEventStore();
 
     useEffect(() => {
         fetchEvents();
