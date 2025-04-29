@@ -4,13 +4,13 @@ import "./navbar.css";
 function Navbar() {
     return(
         <nav className="navbar">
-            <Link className="navbar__item" to="/">
+            <Link className="navbar__item link" to="/">
                 Hem
             </Link>
-            <Link className="navbar__item" to="/events">
+            <Link className="navbar__item link" to="/events">
                 Event
             </Link>
-            <Link className="navbar__item" to="/tickets"> 
+            <Link className="navbar__item link" to="/tickets"> 
                 Biljetter
             </Link>
         </nav>
