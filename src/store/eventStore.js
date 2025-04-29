@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import axios from 'axios';
 
-const useTicketStore = create((set) => ({
+const useEventStore = create((set) => ({
   events: [],
   isLoading: false,
   error: null,
@@ -18,4 +18,4 @@ const useTicketStore = create((set) => ({
   },
 }));
 
-export default useTicketStore;
+export default useEventStore;
