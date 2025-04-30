@@ -60,3 +60,10 @@ body {
   margin-top: 2rem;
   width: 100%;
 }
+
+.message {
+  font-family: var(--text-font);
+  color: var(--color-white);
+  text-align: center;
+  margin-top: 2rem;
+}
