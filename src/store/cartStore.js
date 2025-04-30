@@ -7,6 +7,8 @@ export const useCartStore = create((set, get) => ({
     const newItem = {
       id: event.id,
       name: event.name,
+      from: event.when.from,
+      to: event.when.to,
       price: event.price,
       quantity,
       totalPrice: event.price * quantity,
