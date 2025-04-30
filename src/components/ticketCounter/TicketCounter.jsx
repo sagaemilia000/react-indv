@@ -21,7 +21,6 @@ function TicketCounter({ value, price, onChange }) {
                 <button onClick={increase}>+</button>
             </article>
       </section>
-      
     </div>
   );
 }

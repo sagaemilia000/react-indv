@@ -21,8 +21,22 @@ export const useCartStore = create((set, get) => ({
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   },
 
-//   clearCart: () => {
-//     set({ cartItems: [] });
-//     localStorage.removeItem("cart");
-//   },
+  updateQuantity: (id, newQuantity) => {
+    const updated = get().cartItems
+      .map(item =>
+        item.id === id
+          ? { ...item, quantity: newQuantity, totalPrice: item.price * newQuantity }
+          : item
+      )
+      .filter(item => item.quantity > 0);
+  
+    set({ cartItems: updated });
+    localStorage.setItem("cart", JSON.stringify(updated));
+  },
+  
+  removeItem: (id) => {
+    const updated = get().cartItems.filter(item => item.id !== id);
+    set({ cartItems: updated });
+    localStorage.setItem("cart", JSON.stringify(updated));
+  },
 }));

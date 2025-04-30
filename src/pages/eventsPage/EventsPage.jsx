@@ -13,7 +13,7 @@ function EventsPage() {
         fetchEvents();
     }, []);
 
-    if (isLoading) return <p>Laddar events...</p>;
+    if (isLoading) return <p className="message">Laddar events...</p>;
     if (error) return <p>{error}</p>;
 
     return (
