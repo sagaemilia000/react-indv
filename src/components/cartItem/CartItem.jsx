@@ -9,16 +9,19 @@ function CartItem({ item }) {
     const decrease = () => updateQuantity(item.id, item.quantity - 1);
 
     return (
-        <li className="cart-item">
-            <h2>{item.name}</h2>
-            <p>{item.date} kl {item.from} - {item.to}</p>
-            <p>{item.quantity}</p>
-            <div className="cart-item__controls">
-                <button onClick={decrease}>–</button>
-                <span>{item.quantity}</span>
-                <button onClick={increase}>+</button>
-            </div>
-        </li>
+        <div className="ticket-counter cart-item">
+            <li className="ticket-counter__controls">
+                <section className="cart-item__info">
+                    <h2 className="cart-item__title">{item.name}</h2>
+                    <p className="cart-item__when">{item.date} kl {item.from} - {item.to}</p>
+                </section>
+                <section className="ticket-counter__counter cart-item__counter">
+                    <button className="cart-item__btn ticket-counter__btn" onClick={decrease}>–</button>
+                    <span className="cart-item__value ticket-counter__value">{item.quantity}</span>
+                    <button className="cart-item__btn ticket-counter__btn" onClick={increase}>+</button>
+                </section>
+            </li>
+        </div>
     )
 }
 

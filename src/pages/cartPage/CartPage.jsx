@@ -18,9 +18,9 @@ function CartPage() {
       ) : (
         <>
           <CartList items={cartItems} />
-          <p>Totalt värde på order</p>
-          <h2>Totalt: {total} SEK</h2>
-          <button onClick={clearCart}>Skicka order</button>
+          <p className="event-info__paragraph">Totalt värde på order</p>
+          <h2 className="ticket-counter__total">{total} SEK</h2>
+          <button className="btn" onClick={clearCart}>Skicka order</button>
           <Navbar />
         </>
       )}

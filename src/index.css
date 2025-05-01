@@ -29,7 +29,7 @@ body {
 
 .page-wrapper {
   padding: 2rem;
-  min-height: 100vh;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,7 @@ body {
   border: none;
   color: var(--color-white);
   border-radius: 3px;
-  margin-top: 2rem;
+  margin-top: auto;
   width: 100%;
 }
 
