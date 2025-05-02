@@ -11,13 +11,29 @@ function EventDetailsPage() {
     const location = useLocation();
     const event = location.state?.event;
 
-    const [quantity, setQuantity] = useState(1);
+    // const handleAddToCart = () => {
+    //     addToCart(event, quantity);
+    //     }
+
+    const { getQuantityById } = useCartStore();
+    const [quantity, setQuantity] = useState(() => getQuantityById(event.id));
 
     const { addToCart } = useCartStore();
 
     const handleAddToCart = () => {
-        addToCart(event, quantity);
-        }
+        const item = {
+            id: event.id,
+            name: event.name,
+            date: event.when.date,
+            from: event.when.from,
+            to: event.when.to,
+            price: event.price,
+            quantity,
+            totalPrice: event.price * quantity
+    };
+
+  addToCart(item);
+};
 
     if (!event) {
         return <p>Inget event hittades.</p>;
