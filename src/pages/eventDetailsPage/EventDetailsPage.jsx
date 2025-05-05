@@ -24,6 +24,7 @@ function EventDetailsPage() {
         const item = {
             id: event.id,
             name: event.name,
+            where: event.where,
             date: event.when.date,
             from: event.when.from,
             to: event.when.to,

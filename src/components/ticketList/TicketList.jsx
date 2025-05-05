@@ -1,4 +1,5 @@
 import TicketItem from "../ticketItem/TicketItem";
+import "./ticketList.css"
 
 function TicketList({ tickets }) {
     if (tickets.length === 0) {

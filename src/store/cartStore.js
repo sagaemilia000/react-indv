@@ -74,6 +74,7 @@ export const useCartStore = create((set, get) => ({
         section,
         seat: startSeat + i,
         eventName: item.name,
+        where: item.where,
         date: item.date,
         from: item.from,
         to: item.to,
