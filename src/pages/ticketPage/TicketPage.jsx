@@ -1,12 +1,22 @@
 import Navbar from "../../components/navBar/NavBar"
+import { useEffect, useState } from "react";
+import TicketList from "../../components/ticketList/TicketList";
+import "./ticketPage.css"
 
 function TicketPage() {
-    return (
-        <>
-            <h1>ticketPage</h1>
-            <Navbar />
-        </>
-    )
+  const [tickets, setTickets] = useState([]);
+
+  useEffect(() => {
+    const savedTickets = JSON.parse(localStorage.getItem("orders") || "[]");
+    setTickets(savedTickets);
+  }, []);
+
+  return (
+    <div className="page-wrapper">
+        <TicketList tickets={tickets} />
+        <Navbar />
+    </div>
+  );
 }
 
-export default TicketPage
+export default TicketPage;
