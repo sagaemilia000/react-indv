@@ -2,3 +2,7 @@
 .ticket-list {
     list-style: none;
 }
+
+.ticket-page__background {
+    background-image: linear-gradient(var(--color-pink), var(--color-purple));
+}

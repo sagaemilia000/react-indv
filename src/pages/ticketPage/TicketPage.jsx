@@ -12,7 +12,7 @@ function TicketPage() {
   }, []);
 
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper ticket-page__background">
         <TicketList tickets={tickets} />
         <Navbar />
     </div>

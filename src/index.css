@@ -8,6 +8,8 @@
     --color-pink: #F56B9A;
     --color-green: #37AEAB;
     --color-white: #FFFFFF;
+    --color-grey: rgb(117, 117, 117);
+    --color-grey-text: rgb(81, 81, 81);
 }
 
 @font-face {
