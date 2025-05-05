@@ -2,10 +2,17 @@ import Navbar from "../../components/navBar/NavBar"
 import { useCartStore } from "../../store/cartStore";
 import CartList from "../../components/cartList/CartList";
 import "./cartPage.css";
+import { useNavigate } from "react-router-dom";
 
 function CartPage() {
-  const { cartItems, clearCart } = useCartStore();
+  const { cartItems, submitOrder } = useCartStore();
   const total = cartItems.reduce((sum, item) => sum + item.totalPrice, 0);
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    submitOrder()
+    navigate("/tickets")
+  }
 
   return (
     <div className="page-wrapper">
@@ -20,7 +27,7 @@ function CartPage() {
           <CartList items={cartItems} />
           <p className="event-info__paragraph">Totalt värde på order</p>
           <h2 className="ticket-counter__total">{total} SEK</h2>
-          <button className="btn" onClick={clearCart}>Skicka order</button>
+          <button className="btn" onClick={handleSubmit}>Skicka order</button>
           <Navbar />
         </>
       )}
