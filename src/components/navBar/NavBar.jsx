@@ -8,7 +8,7 @@ function Navbar() {
                 Hem
             </Link>
             <Link className="navbar__item link" to="/events">
-                Event
+                Events
             </Link>
             <Link className="navbar__item link" to="/tickets"> 
                 Biljetter
