@@ -7,13 +7,13 @@ import TicketBarcodeNmbr from "../ticketBarcodeNmbr/TicketBarcodeNmbr";
 
 function TicketItem({ ticket }) {
     return (
-      <div className="ticket">
+      <li className="ticket">
         <TicketHeading name={ticket.eventName}/>
         <TicketWhere where={ticket.where} />
         <TicketWhen date={ticket.date.slice(0, 6)} from={ticket.from} to={ticket.to} />
         <TicketSeatingInfo section={ticket.section} seat={ticket.seat}/>
         <TicketBarcodeNmbr ticketNmbr={ticket.ticketNumber}/>
-      </div>
+      </li>
     );
   }
   

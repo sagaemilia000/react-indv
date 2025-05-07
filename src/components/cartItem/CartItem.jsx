@@ -9,8 +9,8 @@ function CartItem({ item }) {
     const decrease = () => updateQuantity(item.id, item.quantity - 1);
 
     return (
-        <div className="ticket-counter cart-item">
-            <li className="ticket-counter__controls">
+        <li className="ticket-counter cart-item">
+            <div className="ticket-counter__controls">
                 <section className="cart-item__info">
                     <h2 className="cart-item__title">{item.name}</h2>
                     <p className="cart-item__when">{item.date} kl {item.from} - {item.to}</p>
@@ -20,8 +20,8 @@ function CartItem({ item }) {
                     <span className="cart-item__value ticket-counter__value">{item.quantity}</span>
                     <button className="cart-item__btn ticket-counter__btn" onClick={increase}>+</button>
                 </section>
-            </li>
-        </div>
+            </div>
+        </li>
     )
 }
 

@@ -17,16 +17,12 @@ function EventsPage() {
     if (error) return <p>{error}</p>;
 
     return (
-        <>
         <div className="page-wrapper">
             <h1 className="heading">Events</h1>
-            <div className="event-list">
                 <EventList events={events} />
-            </div>
                 <CartBtn />
                 <Navbar />
         </div>
-        </>
     )
 }
 
