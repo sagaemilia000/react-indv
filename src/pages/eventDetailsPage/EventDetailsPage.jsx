@@ -5,15 +5,15 @@ import EventInfo from "../../components/eventInfo/EventInfo";
 import TicketCounter from "../../components/ticketCounter/TicketCounter";
 import "./eventDetailsPage.css"
 import { useCartStore } from "../../store/cartStore";
+// import Confetti from "react-confetti";
+import { fireConfetti } from "../../utils/confetti";
 
 function EventDetailsPage() {
 
+    // const [showConfetti, setShowConfetti] = useState(false);
+
     const location = useLocation();
     const event = location.state?.event;
-
-    // const handleAddToCart = () => {
-    //     addToCart(event, quantity);
-    //     }
 
     const { getQuantityById } = useCartStore();
     const [quantity, setQuantity] = useState(() => getQuantityById(event.id));
@@ -34,6 +34,9 @@ function EventDetailsPage() {
     };
 
   addToCart(item);
+  fireConfetti();
+//   setShowConfetti(true);
+//   setTimeout(() => setShowConfetti(false), 9000);
 };
 
     if (!event) {
@@ -42,6 +45,7 @@ function EventDetailsPage() {
 
     return (
         <div className="page-wrapper">
+            {/* {showConfetti && <Confetti />} */}
             <h1 className="heading">Event</h1>
             <EventInfo event={event}/>
             <Navbar />
