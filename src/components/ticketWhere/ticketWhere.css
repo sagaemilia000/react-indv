@@ -1,0 +1,7 @@
+
+.ticket-where__place {
+    font-family: var(--text-font);
+    color: var(--color-grey-text);
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    border-bottom: dashed 1px var(--color-grey);
+}

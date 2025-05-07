@@ -1,0 +1,16 @@
+
+.ticket-info {
+    padding: .5rem 1.5rem;
+}
+
+.ticket-seating {
+    border-top: dashed 1px var(--color-grey);
+}
+
+.ticket-seating__sec-plc {
+    padding: .5rem 1.5rem;
+    font-family: var(--text-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-grey-text);
+}
