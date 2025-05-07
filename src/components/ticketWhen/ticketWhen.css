@@ -1,0 +1,14 @@
+
+.ticket-when {
+    display: flex;
+    flex-direction: row;
+}
+
+.ticket-when > article {
+    width: 100%;
+    font-family: var(--text-font);
+    color: var(--color-grey-text);
+    font-size: 18px;
+    font-weight: 600;
+    border-right: dashed 1px var(--color-grey);
+}
