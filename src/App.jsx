@@ -4,6 +4,7 @@ import EventsPage from "./pages/eventsPage/EventsPage";
 import EventDetailsPage from "./pages/eventDetailsPage/EventDetailsPage";
 import CartPage from "./pages/cartPage/CartPage";
 import TicketPage from "./pages/ticketPage/TicketPage";
+import ErrorPage from "./pages/errorPage/ErrorPage";
 
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
         <Route 
           path="/tickets"
           element= {<TicketPage/>} />
+        <Route 
+          path="*"
+          element= {<ErrorPage/>} />
       </Routes>
     </BrowserRouter>
     
