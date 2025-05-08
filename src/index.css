@@ -72,3 +72,20 @@ body {
   text-align: center;
   margin-top: 2rem;
 }
+
+.custom-toast {
+  background-color: var(--color-white) !important;
+  color: var(--color-purple) !important;
+  border-radius: 5px !important;
+  font-family: var(--text-font) !important;
+  margin: 2rem !important;
+  width: 90% !important;
+}
+
+.custom-toast-body {
+  font-size: 16px !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--color-green) !important;
+}

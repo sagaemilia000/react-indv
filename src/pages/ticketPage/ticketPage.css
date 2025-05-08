@@ -6,3 +6,7 @@
 .ticket-page__background {
     background-image: linear-gradient(var(--color-pink), var(--color-purple));
 }
+
+.tickets-heading {
+    color: var(--color-white);
+}
