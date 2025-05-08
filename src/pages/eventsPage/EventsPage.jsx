@@ -1,4 +1,3 @@
-// import Navbar from "../../components/navBar/NavBar"
 import "./eventsPage.css"
 import { useEffect } from 'react';
 import useEventStore from '../../store/eventStore';
