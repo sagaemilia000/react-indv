@@ -13,6 +13,7 @@ function TicketPage() {
 
   return (
     <div className="page-wrapper ticket-page__background">
+      <h1 className="heading tickets-heading">Dina biljetter</h1>
         <TicketList tickets={tickets} />
         <Navbar />
     </div>

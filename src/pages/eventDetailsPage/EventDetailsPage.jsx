@@ -1,19 +1,19 @@
 import Navbar from "../../components/navBar/NavBar"
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import EventInfo from "../../components/eventInfo/EventInfo";
 import TicketCounter from "../../components/ticketCounter/TicketCounter";
 import "./eventDetailsPage.css"
 import { useCartStore } from "../../store/cartStore";
-// import Confetti from "react-confetti";
-import { fireConfetti } from "../../utils/confetti";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function EventDetailsPage() {
 
-    // const [showConfetti, setShowConfetti] = useState(false);
-
     const location = useLocation();
     const event = location.state?.event;
+    const navigate = useNavigate();
 
     const { getQuantityById } = useCartStore();
     const [quantity, setQuantity] = useState(() => getQuantityById(event.id));
@@ -33,11 +33,10 @@ function EventDetailsPage() {
             totalPrice: event.price * quantity
     };
 
-  addToCart(item);
-  fireConfetti();
-//   setShowConfetti(true);
-//   setTimeout(() => setShowConfetti(false), 9000);
-};
+            addToCart(item);
+            toast.success(`${event.name} x${quantity} har lagts till i kundvagnen`);
+            navigate("/events")
+    };
 
     if (!event) {
         return <p>Inget event hittades.</p>;
@@ -45,7 +44,6 @@ function EventDetailsPage() {
 
     return (
         <div className="page-wrapper">
-            {/* {showConfetti && <Confetti />} */}
             <h1 className="heading">Event</h1>
             <EventInfo event={event}/>
             <Navbar />

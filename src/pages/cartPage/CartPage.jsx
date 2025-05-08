@@ -3,6 +3,7 @@ import { useCartStore } from "../../store/cartStore";
 import CartList from "../../components/cartList/CartList";
 import "./cartPage.css";
 import { useNavigate } from "react-router-dom";
+import { fireConfetti } from "../../utils/confetti";
 
 function CartPage() {
   const { cartItems, submitOrder } = useCartStore();
@@ -11,6 +12,7 @@ function CartPage() {
 
   const handleSubmit = () => {
     submitOrder()
+    fireConfetti();
     navigate("/tickets")
   }
 
