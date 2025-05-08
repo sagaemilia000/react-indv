@@ -1,4 +1,3 @@
-
 import { useCartStore } from "../../store/cartStore";
 import CartList from "../../components/cartList/CartList";
 import "./cartPage.css";

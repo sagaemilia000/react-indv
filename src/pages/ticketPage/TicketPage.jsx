@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import TicketList from "../../components/ticketList/TicketList";
 import "./ticketPage.css"
@@ -20,7 +19,7 @@ function TicketPage() {
       exit={{ x: "100%", opacity: 0 }}
     >
         <h1 className="heading tickets-heading">Dina biljetter</h1>
-          <TicketList tickets={tickets} />
+        <TicketList tickets={tickets} />
     </motion.div>
   );
 }

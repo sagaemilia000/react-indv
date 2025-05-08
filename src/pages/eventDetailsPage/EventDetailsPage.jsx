@@ -1,4 +1,3 @@
-
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -33,11 +32,11 @@ function EventDetailsPage() {
             price: event.price,
             quantity,
             totalPrice: event.price * quantity
-    };
+        };
 
-            addToCart(item);
-            toast.success(`${event.name} x${quantity} har lagts till i varukorgen`);
-            navigate("/events")
+        addToCart(item);
+        toast.success(`${event.name} x${quantity} har lagts till i varukorgen`);
+        navigate("/events")
     };
 
     if (!event) {
@@ -51,13 +50,13 @@ function EventDetailsPage() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
         >
-                <Link className="back-arrow" to="/events">
-                    <span>◀</span>
-                </Link>
-                <h1 className="heading">Event</h1>
-                <EventInfo event={event}/>
-                <TicketCounter value={quantity} price={event.price} onChange={setQuantity} />
-                <button className="btn cart-btn" onClick={handleAddToCart}>Lägg till i kundvagn</button>
+            <Link className="back-arrow" to="/events">
+                <span>◀</span>
+            </Link>
+            <h1 className="heading">Event</h1>
+            <EventInfo event={event}/>
+            <TicketCounter value={quantity} price={event.price} onChange={setQuantity} />
+            <button className="btn cart-btn" onClick={handleAddToCart}>Lägg till i kundvagn</button>
         </motion.div>
     )
 }
