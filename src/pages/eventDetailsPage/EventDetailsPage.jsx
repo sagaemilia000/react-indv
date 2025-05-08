@@ -1,4 +1,4 @@
-import Navbar from "../../components/navBar/NavBar"
+
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,8 @@ import "./eventDetailsPage.css"
 import { useCartStore } from "../../store/cartStore";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function EventDetailsPage() {
 
@@ -34,7 +36,7 @@ function EventDetailsPage() {
     };
 
             addToCart(item);
-            toast.success(`${event.name} x${quantity} har lagts till i kundvagnen`);
+            toast.success(`${event.name} x${quantity} har lagts till i varukorgen`);
             navigate("/events")
     };
 
@@ -43,13 +45,20 @@ function EventDetailsPage() {
     }
 
     return (
-        <div className="page-wrapper">
-            <h1 className="heading">Event</h1>
-            <EventInfo event={event}/>
-            <Navbar />
-            <TicketCounter value={quantity} price={event.price} onChange={setQuantity} />
-            <button className="btn cart-btn" onClick={handleAddToCart}>Lägg till i kundvagn</button>
-        </div>
+        <motion.div
+            className="page-wrapper"
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+        >
+                <Link className="back-arrow" to="/events">
+                    <span>◀</span>
+                </Link>
+                <h1 className="heading">Event</h1>
+                <EventInfo event={event}/>
+                <TicketCounter value={quantity} price={event.price} onChange={setQuantity} />
+                <button className="btn cart-btn" onClick={handleAddToCart}>Lägg till i kundvagn</button>
+        </motion.div>
     )
 }
 

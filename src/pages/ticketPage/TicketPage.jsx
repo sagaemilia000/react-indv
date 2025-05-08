@@ -1,7 +1,8 @@
-import Navbar from "../../components/navBar/NavBar"
+
 import { useEffect, useState } from "react";
 import TicketList from "../../components/ticketList/TicketList";
 import "./ticketPage.css"
+import { motion } from "framer-motion";
 
 function TicketPage() {
   const [tickets, setTickets] = useState([]);
@@ -12,11 +13,15 @@ function TicketPage() {
   }, []);
 
   return (
-    <div className="page-wrapper ticket-page__background">
-      <h1 className="heading tickets-heading">Dina biljetter</h1>
-        <TicketList tickets={tickets} />
-        <Navbar />
-    </div>
+    <motion.div
+      className="page-wrapper ticket-page__background"
+      initial={{ x: "-100%", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: "100%", opacity: 0 }}
+    >
+        <h1 className="heading tickets-heading">Dina biljetter</h1>
+          <TicketList tickets={tickets} />
+    </motion.div>
   );
 }
 

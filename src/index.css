@@ -89,3 +89,11 @@ body {
 .Toastify__progress-bar {
   background: var(--color-green) !important;
 }
+
+.back-arrow {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  align-self: flex-start;
+  position: absolute;
+  text-decoration: none;
+}
