@@ -1,0 +1,18 @@
+
+.ticket-barcode {
+    width: 40%;
+    opacity: 75%;
+}
+
+.ticket-nmbr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-family: var(--text-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--color-grey-text);
+}

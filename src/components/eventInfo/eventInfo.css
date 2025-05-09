@@ -1,0 +1,44 @@
+.event-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.event-info__paragraph {
+    font-family: var(--text-font);
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--color-white);
+    padding: 0rem 2rem;
+    opacity: 80%;
+}
+
+.event-info__container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.event-info__title {
+    font-family: 'SansitaOne', sans-serif;
+    font-size: 35px;
+    color: var(--color-pink);
+    margin-top: 2rem;
+}
+
+.event-info__when {
+    font-family: var(--text-font);
+    color: var(--color-green);
+    font-size: 19px;
+    font-weight: 700;
+
+}
+
+.event-info__where {
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-white);
+    opacity: 80%;
+}

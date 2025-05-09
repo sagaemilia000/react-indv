@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+:root {
+    --text-font: "Fira Sans", sans-serif;
+
+    --color-purple: #231F42;
+    --color-dark-purple: #18152d;
+    --color-pink: #da527f;
+    --color-green: #37AEAB;
+    --color-dark-green: #007f7b ;
+    --color-white: #FFFFFF;
+    --color-grey: #757575;
+    --color-grey-text: #515151;
+}
+
+@font-face {
+  font-family: 'SansitaOne';
+  src: url('./assets/sansita-one/SansitaOne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-purple);
+}
+
+.page-wrapper {
+  padding: 2rem;
+  padding-bottom: 7rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.heading {
+  color: var(--color-pink);
+  font-size: 32px;
+  font-family: 'SansitaOne', sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-family: var(--text-font);
+  font-size: 22px;
+  font-weight: 600;
+  background-color: var(--color-dark-green);
+  border: none;
+  color: var(--color-white);
+  border-radius: 3px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.message {
+  font-family: var(--text-font);
+  color: var(--color-white);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.custom-toast {
+  background-color: var(--color-white) !important;
+  color: var(--color-purple) !important;
+  border-radius: 5px !important;
+  font-family: var(--text-font) !important;
+  margin: 2rem !important;
+  width: 90% !important;
+}
+
+.custom-toast-body {
+  font-size: 16px !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--color-green) !important;
+}
+
+.back-arrow {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  align-self: flex-start;
+  position: absolute;
+  text-decoration: none;
+}
